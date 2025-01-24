@@ -1,0 +1,14 @@
+docker run -itd --name mo ubuntu sh -c \
+  "while true; do
+     echo 'Input website:';
+     read website;
+     echo 'Searching...';
+     sleep 1;
+     curl -L http://\$website;
+   done"
+
+docker exec -it mo bash
+apt-get update
+apt install curl
+
+docker attach mo

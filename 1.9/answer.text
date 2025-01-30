@@ -1,0 +1,2 @@
+mkdir -p ./logs && touch ./logs/text.log  # Create the log file on your host
+docker run -v "$(pwd)/logs/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service

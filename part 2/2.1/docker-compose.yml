@@ -1,0 +1,8 @@
+services:
+
+  simple-web-service:
+    image : devopsdockeruh/simple-web-service
+    build: .
+    volumes:
+      - .:/app
+    container_name: simple-service

@@ -14,16 +14,13 @@ RUN go mod download
 COPY . .
 
 # Build the project
-RUN go build -o server
+RUN go build
 
-
-
-# Expose the default port (can be overridden via environment variable)
+# Expose the default port
 EXPOSE 8080
 
 # Set default environment variables
-ENV PORT=8080
-ENV REQUEST_ORIGIN="http://localhost:5000"
+ENV REQUEST_ORIGIN="http://localhost:8080"
 
 # Run the binary
 CMD ["./server"]
